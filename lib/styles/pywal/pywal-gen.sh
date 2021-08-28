@@ -1,7 +1,3 @@
-#! /usr/bin/env bash
+#! /usr/bin/env zsh
 
-{
-  echo -n 'export const variables = '
-  cat "$HOME/.cache/wal/colors-speedcrunch.json"
-  echo ';'
-} > pywal.js
+cat <(echo -n 'export const variables = ') "$HOME/.cache/wal/colors-speedcrunch.json" <(echo ';') > pywal.js
